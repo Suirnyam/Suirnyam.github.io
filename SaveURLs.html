@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title>Save Urls | Kódy</title>
+<link rel="icon" type="image/x-icon" href="./icons/coding.png">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra+Petch">
+
+<link rel="stylesheet" href="./css-reset.css">
+<!-- <link rel="stylesheet" href="./scrollbar.css"> -->
+<link rel="stylesheet" href="./SUBmenu.css">
+<link rel="stylesheet" href="./subpages/prism.css" /> <!--Specifické CSS-->
+<link rel="stylesheet" href="./subpages/surls.css"> <!--Specifické CSS-->
+<link rel="stylesheet" href="./footers.css">
+
+</head>
+<body background= "./backgrounds/tim-mossholder-unsplash.jpg">
+
+    <header>
+        
+        <div class="menuAction">
+            <div class="menuIcon" onclick="menuToggle();">
+                <img src="./icons/menu.png" id="menuImg"></div>
+
+                <div class="menu">
+                    <h3 class="menuTitle">Porfolio<br><span class="menuSubtitle">Tomáš Spurný</span></h3>
+
+                    <ul class="polozkyMenu">
+                        <li><a class="subpage" href="./index.html#home">Domů</a>
+                        </li>
+                        
+                        <li><a class="subpage" href="./index.html#projects-MakroHerbar">Makro Herbář</a>
+                            <ul class="subpage-navs" id="plant-nav">
+                                <!-- Sem se doplní položky z data.js -->
+                            </ul>
+                        </li>
+
+                        <li><a class="subpage" href="./index.html#projects-codes">Kódy</a>
+                            <ul class="subpage-navs" id="code-nav">
+                                <!-- ... -->
+                            </ul>
+                        </li>
+
+                        <li><a class="subpage" href="./index.html#projects-stat">Statistiky</a>
+                            <ul class="subpage-navs" id="stat-nav">
+                                <!-- ... -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="title-container">
+        <h1>
+            <p class="nazev">Save Urls</p>
+            <p class="popis">Program k uložení otevřených stránek na Chromu.</p>
+        </h1>
+    </div>
+</header>
+<div class="container-color">
+    <div class="container-content">
+
+        <section>
+            <p class="prgph">Tento kraťoušký pythonovský skript se hodí pro uložení aktuálně otevřených oken v prohlížeči MS Edge. <span class="important">Automatizuje</span> něco, u čeho by se uživatel mohl uklikat u iniciace ukládání do oblíbených položek, volení správné složky atd. Mějmě např. otevřený následujících 13 stránek:</p>
+            <img src="./subpages/tabs.png" alt="Otevřené okna webového proklížeče">
+        </section>
+
+        <section id="nextto">
+            
+            
+            <div class="container" id="python">
+            <div class="code-wrapper">
+              <pre>
+                  <code id="code" class="language-python">
+                    import pyautogui
+                    import os
+                    import pyperclip
+                    import time
+                    
+                    time.sleep(3)
+                    
+                    urls = []
+                    os.system("start msedge www.google.com")
+                    with open('urls.bat', 'a') as f:
+                        while True:
+                            pyautogui.hotkey('ctrl', 'tab')
+                            pyautogui.hotkey('ctrl', 'l')
+                            pyautogui.hotkey('ctrl', 'a')
+                            pyautogui.hotkey('ctrl', 'c')
+                            
+                            url = pyperclip.paste()
+                            if url == "www.google.com":
+                                pass
+                            elif url not in urls:
+                                f.write('start msedge ' + url + '\n')
+                                urls.append(url)
+                                time.sleep(1)
+                            else:
+                                break
+                    
+                    print("Konec")
+                    os.system("pause")
+                  </code>
+              </pre>
+              <button id="copy-button">Kopírovat</button>
+            </div>
+        </div>
+        <div class="run">
+
+            <p class="prgph">Po spuštění skriptu přes příkazovou řádku, program chvíli čeká, aby uživatel případně <span class="important">doaktivoval okno prohlížeče.</span> Jinak totiž nebudou fungovat následující klávesové zkratky:
+                <ul>
+                    <li>Ctrl + tab = mění aktivní okno</li>
+                    <li>Ctrl + L = označí řádku s url adresou webu</li>
+                    <li>Ctrl + A = označí celou url adresu</li>
+                    <li>Ctrl + C = zkopíruje ji do schránky</li>
+                </ul>
+
+            Zkopírovanou adresu zhodnotí a pokud se ji ještě neuložil, uloží ji. Jinak se ukončí. Tak je zajištěno, že neběží while cyklus do nekonečna, protože takový je charakter klávesové zkratky Ctrl + tab.
+            </p>
+            <p class="prgph">Výstupem je <span class="important">batch soubor</span> jehož poklikem se rovnou spustí všechny uložené webové stránky </p>
+        </div>
+            
+    </section>
+
+    <section>
+
+        <div class="container" id="batch">
+            <div class="code-wrapper">
+                  <pre>
+                      <code id="code" class="language-batch">
+                        start msedge https://musiclab.chromeexperiments.com/Spectrogram/
+                        start msedge https://transit-finder.com/
+                        start msedge https://www.macroinvertebrates.org/taxa-characters/diptera-larva
+                        start msedge http://www.onezoom.org/life.html/@biota=93302?img=best_any&anim=flight#x593,y1163,w1.8522
+                        start msedge https://www.informationisbeautiful.net/visualizations/who-old-are-you/
+                        start msedge https://www.primermagazine.com/2022/live/your-life-in-weeks-visualized
+                        start msedge https://waitbutwhy.com/2014/05/life-weeks.html
+                        start msedge https://trigon.frvr.com/
+                        start msedge https://www.jasondavies.com/maps/voronoi/airports/
+                        start msedge https://musiclab.chromeexperiments.com/Strings
+                        start msedge https://maxzilla60.github.io/Spelling-with-Elements/
+                        start msedge https://www.echalk.co.uk/Science/physics/solarSystem/InteractiveEarth/interactiveEarth.html
+                        start msedge http://animatedengines.com/    
+                      </code>
+                  </pre>
+            </div>
+          </div>
+          <button id="copy-button">Copy</button>
+          
+        </section>
+
+
+</div>
+</div>
+
+<footer>
+    <p class="footItem">Tomáš Spurný</p>
+    <a class="footItem" href="mailto:muj.mail@zaZavinacem.to">muj.mail@zaZavinacem.to</a>
+    <p class="footItem">jaro 2023</p>
+</footer>
+
+<script src="./DataMenu.js"></script>
+<script src="./main.js"></script>
+<script src="./subpages/prism.js"></script>
+</body>
+</html>
+

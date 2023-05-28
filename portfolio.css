@@ -1,0 +1,468 @@
+
+/* ############################################################################################################################ */
+/* HLAVNÍ HTML TAGY */
+html,
+body {
+    height: auto;
+}
+
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+    background-color: #42523f;
+    margin: 0;
+    border: 0;
+    /* scroll-margin-top: 63px; height of sticky header */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+	color: #000;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-weight: 300;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    border-radius: 0px;
+}
+
+section {
+    width: 100%;
+    min-height: 80vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    scroll-margin-top: 95px; /* height of sticky header */
+    z-index: 5;
+}
+
+
+
+
+/* ############################################################################################################################ */
+/* NAVIGAČNÍ LIŠTA */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #64615F;
+    background-image: url("./backgrounds/alan-scales-1_WMZARl81c-unsplash.jpg");
+    background-position: center;
+
+    z-index: 10;
+    width: 100%;
+}
+
+nav .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    z-index: 10;
+
+}
+
+nav .container ul li {
+    display: inline-block;
+    border-radius: 15px;
+    z-index: 10;
+    text-shadow: 0px 0px 5px #ffffff;
+
+
+}
+
+nav .container ul li a {
+    display: inline-block;
+    text-decoration: none;
+
+    font-weight: 500;
+    
+    padding: 10px 20px;
+    color: black;
+    z-index: 10;
+
+}
+
+nav .container ul li.active {
+    background-color: #296a47;
+    transition: 0.3s;
+}
+
+nav .container ul li.active a {
+    color: #ffffff;
+}
+
+
+/* ############################################################################################################################ */
+/* Landing část - úvod */
+#home {
+    background-image: url("./backgrounds/oskaras-verbickas-PRllh5FjYgI-unsplash.jpg");
+    background-repeat: repeat;
+    background-size: auto 100%;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 192/128;
+    color: #fff;
+    z-index: 10;
+}
+
+.welcome {
+    width: 100%;
+    aspect-ratio: 192/60;
+    background-color: #02020288;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.greet {
+    font-size: 30px;
+    font-weight: 400;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.fontlight {
+    font-weight: 300;
+    margin-bottom: 1.5rem !important;
+}
+
+.fnm {
+    color: #EF3724 !important;
+    font-weight: bolder;
+}
+
+
+.whoami {
+    padding: 16px 24px;
+    background-color: rgba(32, 28, 28, 0.8);
+    color: #EF3724;
+    font-size: 16px;
+    border-radius: 40px;
+
+    display: inline-block;
+    padding: 25px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 20px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+/* ############################################################################################################################ */
+/* SEKCE O MNĚ */
+
+#about {
+    background-color: #fff;
+    height: fit-content;
+    background-image: url("./backgrounds/bg_bggenerator_com (1).jpg");
+    background-size: auto 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.avatar {
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+    margin: 150px 0 260px 20px;
+    border-radius: 10px;
+}
+
+.aboutMe {
+    height: 300px;
+    margin: 260px 20px 0px 0;
+
+}
+
+.aboutMe ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.about-waves {
+    padding-top: 250px;
+}
+
+
+
+/* ############################################################################################################################ */
+/* SEKCE MAKROHERBÁŘ */
+
+#projects-MakroHerbar {
+height: fit-content;
+width: fit-content;
+background-color: #723333;
+}
+
+.plants-text {
+    color: white;
+}
+
+.name {
+    color: #ffffff;
+    font-size: 60px;
+    text-shadow: 0 0 2px black;
+    word-break: break-word;
+    border-bottom: 5px solid #64615F;
+}
+
+.own-desc {
+    text-align: justify;
+}
+
+.important {
+    font-weight: bold;
+}
+
+.plant-gallery, .code-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 50px;
+}
+
+.img-fluid {
+    border: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+    position: relative;
+    opacity: 0.8;
+}
+
+.genus { 
+    font-weight: 900; 
+}
+
+.plantDescr {
+	line-height: 2;
+}
+
+.waves {
+    width: 100vw;
+}
+
+
+
+
+/* ############################################################################################################################ */
+/* SEKCE STATISTIKY */
+.stat-desc {
+    background-image: url("./backgrounds/graphs.jpg");
+    background-size: auto 100% ;
+    background-repeat: no-repeat;
+    background-color: white;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40%;
+    width: 50%;
+    padding-right: 10%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.stat-desc h2 {
+    font-size: 80px;
+    font-weight: bold;
+    border-bottom: 5px solid #64615F;
+}
+
+.stat-desc p, 
+.codes-text p, 
+.plants-text p{
+    margin:50px;
+}
+
+.analyses {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.analyses a {
+    text-decoration: none;
+}
+
+.analyses img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+  }
+
+.analyses p {
+    position: relative;
+    width: 270px;
+    margin: -3rem 0 2rem 1rem;
+    padding: 1rem;
+    color: #dddddd;
+    background-color: #2e2c2ba4;
+}
+
+
+
+
+/* ############################################################################################################################ */
+/* SEKCE KÓDY */
+
+#projects-codes {
+    /* width: 100vw; */
+    width: 100%;
+}
+
+.codes-bcg {
+    background-image: url("./backgrounds/polygon-scatter-haikei.svg");
+    background-size: auto 100% ;
+    background-repeat: repeat;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.codes-text, 
+.plants-text{
+    margin:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.codes-text{
+    background-color: #001120;
+}
+
+.code-gallery{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+
+
+/* ############################################################################################################################ */
+/* KONTAKTNÍ FORMULÁŘ */
+
+#contact {
+    justify-content: flex-start;
+    background-color: #038373;
+}
+
+#contact h2 {
+    padding-top: 70px;
+}
+
+.contact-container {
+    font-size: 14px;
+}
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%; 
+    padding: 2px;
+    border: 1px solid #038373; 
+    border-radius: 5px;
+    box-sizing: border-box;  
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical 
+}
+
+
+input[type=submit] {
+    background-color: #038373;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #036983;
+}
+
+.contact-container {
+    border-radius: 8px;
+    background-color: #dddddd;
+    padding: 20px;
+    margin: 100px;
+}
+
+
+/* ############################################################################################################################ */
+/* ############################################################################################################################ */
+
+
+@media (max-width: 900px) {
+    .avatar {
+
+        margin: 200px 0 60px 0;
+    }
+    
+    .aboutMe {
+        margin: 50px 0 100px 0;
+        padding-bottom: 400px;
+    
+    }
+
+    .stat-desc{
+        background-size: auto 75%;
+        padding-top: 300px;
+        padding-bottom: 50px;
+        padding-left: 0%;
+        padding-right: 0px;
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+    .avatar, .aboutMe{
+        width: 300px;
+        height: auto;
+    }
+
+    .name {
+        inline-size: 300px;
+        text-align: center;
+    }
+
+}
