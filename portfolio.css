@@ -4,6 +4,7 @@
 html,
 body {
     height: auto;
+    overflow-x: hidden;
 }
 
 
@@ -131,10 +132,12 @@ nav .container ul li.active a {
     font-size: 30px;
     font-weight: 400;
     padding: 20px;
+    text-align: center;
 }
 
 h1 {
     font-size: 40px;
+    text-align: center;
 }
 
 .fontlight {
@@ -290,16 +293,15 @@ background-color: #723333;
     padding-bottom: 200px;
 }
 
-.stat-desc h2 {
-    font-size: 80px;
-    font-weight: bold;
-    border-bottom: 5px solid #64615F;
-}
 
 .stat-desc p, 
 .codes-text p, 
 .plants-text p{
     margin:50px;
+}
+
+.stat-desc h2 {
+    color: #000;
 }
 
 .analyses {
@@ -462,9 +464,6 @@ input[type=submit]:hover {
     .name {
         inline-size: 300px;
         text-align: center;
-    }
-
-    h2 {
-        font-size: 14px;
+        font-size: 45px;
     }
 }
