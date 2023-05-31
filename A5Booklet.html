@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title>A6 Bookleting | Kódy</title>
+<link rel="icon" type="image/x-icon" href="./icons/coding.png">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra+Petch">
+
+<link rel="stylesheet" href="./css-reset.css">
+<!-- <link rel="stylesheet" href="./scrollbar.css"> -->
+<link rel="stylesheet" href="./SUBmenu.css">
+<link rel="stylesheet" href="./subpages/prism.css" /> <!--Specifické CSS-->
+<link rel="stylesheet" href="./subpages/A5B.css"> <!--Specifické CSS-->
+<link rel="stylesheet" href="./footers.css">
+
+</head>
+<body background= "./backgrounds/tim-mossholder-unsplash.jpg">
+
+    <header>
+        
+        <div class="menuAction">
+            <div class="menuIcon" onclick="menuToggle();">
+                <img src="./icons/menu.png" id="menuImg"></div>
+
+                <div class="menu">
+                    <h3 class="menuTitle">Porfolio<br><span class="menuSubtitle">Tomáš Spurný</span></h3>
+
+                    <ul class="polozkyMenu">
+                        <li><a class="subpage" href="./index.html#home">Domů</a>
+                        </li>
+                        
+                        <li><a class="subpage" href="./index.html#projects-MakroHerbar">Makro Herbář</a>
+                            <ul class="subpage-navs" id="plant-nav">
+                                <!-- Sem se doplní položky z data.js -->
+                            </ul>
+                        </li>
+
+                        <li><a class="subpage" href="./index.html#projects-codes">Kódy</a>
+                            <ul class="subpage-navs" id="code-nav">
+                                <!-- ... -->
+                            </ul>
+                        </li>
+
+                        <li><a class="subpage" href="./index.html#projects-stat">Statistiky</a>
+                            <ul class="subpage-navs" id="stat-nav">
+                                <!-- ... -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-container">
+            <h1>
+                <p class="nazev">A6 Bookleting</p>
+                <p class="popis">K rozložení stránek brožury na list A4 k tvorbě vázané knížky formátu A5</p>
+            </h1>
+        </div>
+    </header>
+
+
+<div class="container-color">
+    <div class="container-content">
+
+        <section class="sec1">
+            <p class="prgph" id="par1">Máte-li spoustu materiálů k vytisknutí, ale chcete <span class="important">ušetřit papír a inkoust.</span>.</p>
+                
+                
+            <img src="./subpages/A5booklets/rich-tervet-unsplash.jpg" alt="svazky knihy" id="img1">
+                
+        </section>
+        <p class="prgph">Jde o pythonovskou aplikaci pro příkazovou řádku. Vezme na vstupu PDF soubor a přeskládá a přetočí její stránky tak, aby po vytisknutí šli sešít do svazků. Jde tak vytvořit <span class="important">plnohodnotnou knihu</span>. Zároveň si i <span class="important">ušetříte místo v knihovně</span>, nebo jste-li student, uděláte si materiály uskladnitelnější.</p>
+
+        <p class="prgph">Vstup a výstupy ilustrují následující pdf soubory pro 24 stránkové originální pdfko:</p>
+            
+        <section>
+            <div class="sec2">
+                <div class="pdfs">
+                    <p>Stránky originálu</p>
+                    <object data="./subpages/A5booklets/A5_booklettest_orig.pdf#view=FitH&zoom=150" type="application/pdf" class="embedPDF">
+                        <p>Unable to display PDF file.<br><a href="./subpages/A5booklets/A5_booklettest_orig.pdf">Download</a> instead.</p>
+                    </object>
+                </div>
+                <div class="pdfs">
+                    <p>A4 stránky pro tisk</p>
+                    <object data="./subpages/A5booklets/A5_booklettest_4.pdf#view=FitH" type="application/pdf" class="embedPDF">
+                        <p>Unable to display PDF file.<br><a href="./subpages/A5booklets/A5_booklettest_4.pdf">Download</a> instead.</p>
+                    </object>
+                </div>
+                <div class="pdfs">
+                    <p>Stránky pro tisk na A4</p>
+                    <object data="./subpages/A5booklets/A5_booklettest_A5.pdf#view=FitH" type="application/pdf" class="embedPDF">
+                        <p>Unable to display PDF file.<br><a href="./subpages/A5booklets/A5_booklettest_A5.pdf">Download</a> instead.</p>
+                    </object>
+                </div>
+            </div>
+            <!-- https://stackoverflow.com/questions/20562543/zoom-to-fit-pdf-embedded-in-html -->
+        </section>
+
+<section class="sec3">
+    <p class="prgph">Na první pohled se může zdát, že čísla stránek a jejich přeskládání či přetočení nění nijak provázáno. Čísla nesou dělitelná jedním číslem, zdá se že náhodně střídají. Nicméně ani to není pravda. Mějmě, pro příklad, osmi stránkový soubor, z něhož bychom chtěli udělat brožurku, jeden svazek. Osm stránek proto, protože právě ony <span class="important">pokryjí celý list A4 z obou stran</span>. Označíme-li stránky podle toho, jestli jsou na začátku, konci, před nebo po prostředku svazku, střídají se stránky na listu A4 (startujíc v levém horním rohu) v sekvenci: <span class="important">konec, zacatek, po, před; zacatek, konec, před, po</span>. K tomu se <span class="important">prostřední polovina stránek otáčí</span>. To co se děje shnuje následující tabulka:</p>
+
+    <table class="OrderTable" cellspacing="0">
+        <colgroup span="8"></colgroup>
+        <tr>
+            <td class="table_head" colspan=9>8 stran A6 = 2 archy A5 = 1 list A4</b></td>
+            </tr>
+        <tr>
+            <td class="middle_sep left_edge right_edge group1"><b>Čísla A6 stránek originálu</b></td>
+            <td id="or1" class="middle_sep">1</td>
+            <td id="or2" class="middle_sep">2</td>
+            <td id="or3" class="middle_sep">3</td>
+            <td id="or4" class="middle_sep">4</td>
+            <td id="or5" class="middle_sep midVer_sep">5</td>
+            <td id="or6" class="middle_sep">6</td>
+            <td id="or7" class="middle_sep">7</td>
+            <td id="or8" class="middle_sep right_edge">8</td>
+        </tr>
+        <tr>
+            <td class="left_edge right_edge group1"><b>Pořadí na A4 listu pro brožuru</b></td>
+            <td id="or2">2</td>
+            <td id="or5">5</td>
+            <td id="or7">7</td>
+            <td id="or4">4</td>
+            <td id="or3" class="midVer_sep">3</td>
+            <td id="or8">8</td>
+            <td id="or6">6</td>
+            <td id="or1" class="right_edge">1</td>
+        </tr>
+        <tr>
+            <td class="left_edge right_edge group1"><b>Otočení A6 strany na A4 listu?</b></td>
+            <td></td>
+            <td></td>
+            <td>Ano</td>
+            <td>Ano</td>
+            <td class="midVer_sep">Ano</td>
+            <td>Ano</td>
+            <td></td>
+            <td class="right_edge right_edge" ></td>
+        </tr>
+        <tr>
+            <td class="middle_sep left_edge right_edge group2">Označení 1. strany A4 listu</td>
+            <td class="middle_sep">začátek</td>
+            <td class="middle_sep"></td>
+            <td class="middle_sep"></td>
+            <td class="middle_sep">před</td>
+            <td class="middle_sep midVer_sep">po</td>
+            <td class="middle_sep"></td>
+            <td class="middle_sep"></td>
+            <td class="middle_sep right_edge">konec</td>
+        </tr>
+        <tr>
+            <td class="last_row left_edge right_edge group2">Označení 2. strany A4 listu</td>
+            <td class="last_row"></td>
+            <td class="last_row">začátekk</td>
+            <td class="last_row">ppřed</td>
+            <td class="last_row"></td>
+            <td class="last_row midVer_sep"></td>
+            <td class="last_row">poo</td>
+            <td class="last_row">kkonec</td>
+            <td class="last_row right_edge"></td>
+        </tr>
+    </table>
+
+
+    <p class="prgph">Klasický knižní svazek má 16 stran, vzniká tedy ze dvou archů A4 (resp. klasicky A3). Ale snesitelných je i <span class="important">24 stran na svazek</span>. Logika z tabulky se přenáší. Vždy se <span class="important">určí 8 stránek</span> (začátek, začátekk, ...), uspořádají se a <span class="important">odstraní</span> se z množiny neuspořádaných stránek. To se opakuje ještě dvakrát dokud nezbyde žádná stránka u daného svazku. Pak se přistoupí k dalšímu svazku.</p>
+
+</section>
+
+
+        <section id="nextto">
+            
+            
+            <div class="container" id="python">
+            <div class="code-wrapper">
+              <pre>
+                  <code id="code" class="language-python">
+                    from math import ceil
+                    import os
+                    import sys
+                    from pdfrw import PdfReader, PdfWriter, PageMerge
+                    from PyPDF2 import PdfFileWriter, PdfFileReader
+                    
+                    cesta = sys.argv[1]
+                    trailer = PdfReader(cesta)
+                    ALL_PAGES = trailer.pages
+                    soubor = len(ALL_PAGES) #stranek souboru
+                    print('Soubor '+ str(cesta) +' má '+str(soubor)+' originálních stran.')
+                    
+                    #tvorba sekvence stránek-----
+                    ARCHY = 3 #A4; archy svazku
+                    print(f"Jeden svazek bude mít {ARCHY*2} listů A5 a {ARCHY*4*2} stránek A6. Pro 3 arch A4 na jeden svazek.")
+                    
+                    pocet_svazku = ceil(soubor/(ARCHY*4*2))
+                    cele_svazky, zbytek= divmod(soubor, (ARCHY*4*2))
+                    ZBYTEK = zbytek
+                    stranek = pocet_svazku * ARCHY*8
+                    
+                    
+                    #zisk sekvence pro celistvé svazky
+                    start_svazku = 1
+                    sekvence = []
+                    pretocit = []
+                    for each in range(cele_svazky): #pro kazdy celý svazek sestav sekvenci
+                        print(f"svazek {each+1}")
+                        mnozina = list(range(start_svazku, ARCHY*8 + start_svazku))
+                        for arch in range(ARCHY):
+                            print(f"   {arch + 1}. arch")
+                            #cyklus: konec, zacatek, po, před, -- zacatek, konec, před, po
+                            zacatek, před, po, konec = min(mnozina), mnozina[-1+len(mnozina)//2] ,mnozina[len(mnozina)//2], max(mnozina)
+                            zacatekk, ppřed, poo, kkonec = mnozina[1], mnozina[-2+len(mnozina)//2] ,mnozina[1+len(mnozina)//2], mnozina[len(mnozina)-2]
+                            
+                            dalsi_list = [konec, zacatek, po, před, zacatekk, kkonec, ppřed, poo]
+                                        
+                            sekvence.extend(dalsi_list)
+                            
+                            if arch == 2:
+                                prevratit = list(range(ppřed, poo + 1))
+                                pretocit.extend(prevratit)
+                            
+                            mnozina = sorted(list(set(mnozina).difference(set(dalsi_list))))
+                            
+                        start_svazku += 24 
+                        print(cele_svazky*ARCHY*8 + 1 - start_svazku)
+                               
+                    # a pro ten neceliství zbytek
+                    if zbytek != 0:
+                        if ZBYTEK > 16:
+                            archy = ARCHY - 0
+                            blanks = 24 - ZBYTEK
+                        elif ZBYTEK < 16 and ZBYTEK > 8:
+                            archy = ARCHY - 1
+                            blanks = 16 - ZBYTEK
+                        elif ZBYTEK < 8 and ZBYTEK > 0:
+                            archy = ARCHY - 2
+                            blanks = 8 - ZBYTEK
+                        print(f"Necelý svazek svazek bude mít {archy} archy.")
+                        mnozina = list(range(start_svazku, archy*8 + start_svazku))
+                        for arch in range(archy):
+                            print(f"   {arch + 1}. arch")
+                            #cyklus: konec, zacatek, po, před, -- zacatek, konec, před, po
+                            zacatek, před, po, konec = min(mnozina), mnozina[-1+len(mnozina)//2] ,mnozina[len(mnozina)//2], max(mnozina)
+                            zacatekk, ppřed, poo, kkonec = mnozina[1], mnozina[-2+len(mnozina)//2] ,mnozina[1+len(mnozina)//2], mnozina[len(mnozina)-2]
+                            
+                            dalsi_list = [konec, zacatek, po, před, zacatekk, kkonec, ppřed, poo]
+                                        
+                            sekvence.extend(dalsi_list)
+                            
+                            if arch == archy-1:
+                                prevratit = list(range(ppřed, poo + 1))
+                                pretocit.extend(prevratit)
+                            
+                            mnozina = sorted(list(set(mnozina).difference(set(dalsi_list))))
+                    else:
+                        blanks = 0
+                    print("  --sekvence byla úspěšně sestavena")
+                    
+                    
+                    print(f'Bude vloženo {blanks} prázdných stránek. Vprůběhu proběhne i otočení a uspořádání. Uloženo do průběžného souboru (bude smazán).')
+                    W_rotblanks = PdfFileWriter() 
+                    reader = PdfFileReader(open(cesta, 'rb')) 
+                    for strana in sekvence:
+                        if strana <= soubor:
+                            page = reader.getPage(strana-1)
+                            if strana in pretocit:
+                                page.rotateClockwise(180)
+                            W_rotblanks.addPage(page)
+                        else:
+                            W_rotblanks.addBlankPage()
+                    output = open('W_rotblanks' + os.path.basename(cesta),'wb') 
+                    W_rotblanks.write(output) 
+                    output.close() 
+                    print("  -- úspěsně")
+                    
+                    
+                    OUTFN = 'A5_booklet_' + os.path.basename(cesta)
+                    #čtyři stranky na jednu
+                    def get4(srcpages):
+                        scale = 0.5
+                        srcpages = PageMerge() + srcpages
+                        x_increment, y_increment = (scale * i for i in srcpages.xobj_box[2:])
+                        for i, page in enumerate(srcpages):
+                            page.scale(scale)
+                            page.x = x_increment if i & 1 else 0
+                            page.y = 0 if i & 2 else y_increment
+                        return srcpages.render()
+                    
+                    if ZBYTEK == 0:
+                        pages = PdfReader('W_rotblanks' + os.path.basename(cesta)).pages
+                        writer = PdfWriter(OUTFN)
+                        for index in range(0, len(pages), 4):
+                            writer.addpage(get4(pages[index:index + 4]))
+                        writer.write()
+                    
+                        os.remove('W_rotblanks' + os.path.basename(cesta))
+                  </code>
+              </pre>
+              <button id="copy-button">Kopírovat</button>
+            </div>
+        </div>
+
+        <div class="run">
+            <p class="prgph">Python pracuje se souborem PDF jako <span class="important">indexovatelným objektem</span>. Proto stačí vytvořit sekvenci stránek a vektor stránek pro otáčení. Program pak vytvoří nové PDF se správně seřazenými stránkami. Pokud je počet stránek dělitelný 24, rozmístí je i do mřížky.</p>
+            <p class="prgph">Při tisknutí je potom třeba dbát na to, aby <span class="important">oproti první originální stránce byla druhá originální stránka</span> atd. Takže pokud se stránky jen seřatí a přetočí (nejčastější) tak funguje oboustranný tisk (orientace na výšku, převracení na delším okraji) se 4 stránkami na list (pořadí stránek: vodorovně); je nutno tisknout ručně po 24 stránkách.</p>
+        </div>
+        
+    </section>
+    
+    
+    <p class="prgph">Po vytisknutí pak stačí A4 listy jen <span class="important">přehnout</span>, předvrtat díry pro niť, <span class="important">znovu přehnout</span> (nyní na formát A6) a svazky sešít. Při přehýbání kontrolujte, zda vám navazují čísla stránek. K volnému listování je třeba ještě rozdělit dolní přehlé hrany. Lze je přeříznout, přestříhnout, ale nejlepší je použít <span class="important">brousící papír na brusce</span>. Docílí se tak hladkých boků vzniknuvší knížky.</p>
+
+</div>
+</div>
+
+<footer id="footer">
+    <p class="footItem">Tomáš Spurný - Portfolio</p>
+    <a class="footItem" href="mailto:tomass.spurny@seznam.cz">tomass.spurny@seznam.cz</a>
+    <p class="footItem">jaro 2023</p>
+
+    <ul class="">
+        <li><a href="https://www.facebook.com/tomas.spurny.967"><img src="./icons/fb.png"></a></li>
+        <li><a href="https://www.instagram.com/vejdrspurny/"><img src="./icons/ig.png"></a></li>
+        <li><a href="https://github.com/Berusska"><img src="./icons/gthb.png"></a></li>
+        <li><a href="mailto:muj.mail@zaZavinacem.to"><img src="./icons/mail.png"></a></li>
+        <li><a href="https://youtu.be/wj5fD-QECy0&t=27"><img src="./icons/ytb.png"></a></li>
+        <!-- <li><a href="https://www.youtube.com/shorts/pgtu5es2vOk"><img src="./icons/ytb.png"></a></li> -->
+    </ul>
+</footer>
+
+
+<script src="./DataMenu.js"></script>
+<script src="./main.js"></script>
+<script src="./subpages/prism.js"></script>
+</body>
+</html>
