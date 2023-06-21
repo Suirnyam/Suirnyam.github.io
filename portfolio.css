@@ -217,7 +217,7 @@ h1 {
 
 #projects-MakroHerbar {
 height: fit-content;
-background-color: #723333;
+background-color: #72333396;
 }
 
 .plants-text {
@@ -358,7 +358,7 @@ background-color: #723333;
 
 .codes-text, 
 .plants-text{
-    margin:50px;
+    margin:0px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title>Podběl obecný | Poznej Kytky</title>
+<link rel="icon" type="image/x-icon" href="./icons/flower-icon.png">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Miss+Fajardose|Gwendolyn">
+<link rel="stylesheet" href="./css-reset.css">
+<link rel="stylesheet" href="./scrollbar.css">
+<link rel="stylesheet" href="./SUBmenu.css">
+<link rel="stylesheet" href="./subpages/tus.css"> <!--Specifické CSS-->
+<link rel="stylesheet" href="./footers.css">
+</head>
+
+<body background= "./backgrounds/okno.jpg">
+    <header>
+        
+        <div class="menuAction">
+            <div class="menuIcon" onclick="menuToggle();">
+                <img loading="lazy" src="./icons/menu.png" id="menuImg"></div>
+
+                <div class="menu">
+                    <h3 class="menuTitle">Porfolio<br><span class="menuSubtitle">Tomáš Spurný</span></h3>
+
+                    <ul class="polozkyMenu">
+                        <li><a class="subpage" href="./index.html#home">Domů</a>
+                        </li>
+                        
+                        <li><a class="subpage" href="./index.html#projects-MakroHerbar">Makro Herbář</a>
+                            <ul class="subpage-navs" id="plant-nav">
+                                <!-- Sem se doplní položky z data.js -->
+                            </ul>
+                        </li>
+
+                        <li><a class="subpage" href="./index.html#projects-codes">Kódy</a>
+                            <ul class="subpage-navs" id="code-nav">
+                                <!-- ... -->
+                            </ul>
+                        </li>
+
+                        <li><a class="subpage" href="./index.html#projects-stat">Statistiky</a>
+                            <ul class="subpage-navs" id="stat-nav">
+                                <!-- ... -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-container">
+            <h1>
+                <p class="latin">Equisetum arvensis</p>
+                <hr>
+                <p class="czech">Přestlička rolní</p>
+            </h1>
+        </div>
+    </header>
+
+<div class="container-color">
+    <div class="container-content">
+
+        <section>
+            <p class="prgph">Je vzhledově velice podobný pampelišce obecné. Vykvétá v přibližně stejnou dobu. Má taktéž jasně žlutavé květenství na vysoké lodyze. Nicméně je od ní natolik rozdílný, že vytváří samostatný botanický druh.</p>
+
+        </section>
+
+        <section class = "between">
+            <p class="prgph">Rostlina patří do čeledi <span class="important">hvězdnicovitých</span> a tedy má její určité znaky. Jeho květy tvoří květentví úboru. To je  <span class="important">vrcholičnaté</span> květenství, co znamená, že květy rozkvétají zdola nahoru a <span class="important">od obvodu do středu</span> květenství.</p>
+            <p class="prgph">V následující galerii můžeme to můžeme pozorovat. Po tom co rozkvetou okrajové jazykovité květy, začnou kvést ty trubkovité. Během toho se plochý terč vypoulí, tím jak středové květy přerůstají ty vykvetlé po obvodu.</p> 
+        </section>
+            <div class="scrollmenu" id="scroll1">
+                <div class = "slides-div"><img loading="lazy" class = "zoom img-w" src="./subpages/Tussilago/kvet_.jpg" alt="Podběl s rozkvetlými jazykovitými květy"></div>
+                <div class = "slides-div"><img loading="lazy" class = "zoom img-w" src="./subpages/Tussilago/kvet1.jpg" alt="Rozkvétající podvěl"></div>
+                <div class = "slides-div"><img loading="lazy" class = "zoom img-w" src="./subpages/Tussilago/kvet2.jpg" alt="Podběl s kvetoucími trubkovitými květy"></div>
+                <div class = "slides-div"><img loading="lazy" class = "zoom img-w" src="./subpages/Tussilago/kvet3.jpg" alt="Kvetoucí úbor podbělu"></div>
+                <div class = "slides-div"><img loading="lazy" class = "zoom img-w" src="./subpages/Tussilago/kvet4.jpg" alt="Vypoukly terč podbělu"></div>
+                <div class = "slides-div"><img loading="lazy" class = "zoom img-w" src="./subpages/Tussilago/kvet5.jpg" alt="Terč úboru podbělu"></div>
+                <div class = "slides-div"><img loading="lazy" class = "zoom img-w" src="./subpages/Tussilago/kvet6.jpg" alt="Plně rozkvetlý terč podbělu"></div>
+            </div>
+        <p class="prgph">Jen jako poznámka: Trubkovité květy jsou pětičetné a jako mladé jsou v terči na sebe relativně těsně nahloučené. Nicméně z pravidelného pětiúhelníku nelze plně pokrýt plochu. Bez mezer totiž vzniká dodekahedron, jedno z platónských těles. Na plné pokrytí je třeba (mj. např.) šestiúhelník. Jestli tím příroda něco sleduje v rámci šetření místa pro květy a za maximalizování plochy rozkvetlých květů?</p>
+
+        <section class="imgtext flos-section">
+            <img loading="lazy" src="./subpages/Tussilago/jazyk.jpg" alt="Jazykovité květy podbělu" class="zoom sec-img flos-img">
+            <div class = "insection-text flos">
+                <p class="prgph">Úbor obsahuje dva typy květů. Jejich barva se ale neřídí typickým zbarvením, tj. žluté uprostřed a bílé nebo jinak barevné na okraji. </p> 
+                <p class="prgph">Je vidět <span class="important">spodní</span> semeník, kalich <span class="important">přeměnný</span> na chmýr, a pak koruna (jazykovitá zygomorfní nebo trubkovitá srostlá z pěti lístků) a blizny. U trubkovitých květů je jestě pět tyčinek, které srůstají na úrovni pouzder. Na rozdíl od pampelišky zde <span class="important">chybí stopka</span> mezi chmýrem a semeníkem.</p>
+            </div>
+            <img loading="lazy" src="./subpages/Tussilago/trubka.jpg" alt="Trubkovité květy podbělu" class="zoom sec-img flos-img">
+        <!-- https://uselessetymology.com/2018/02/03/the-etymology-of-dandelion/ -->
+        </section>
+
+
+        <section class="between">
+            <p class="prgph">Ontogeneze květu - než podběl vykvete je to dlouhá cesta. Následující galerie ji popisuje.</p>
+            <div class="scrollmenu">
+                <div class="slides-div">
+                    <img loading="lazy" class = "zoom img" src="./subpages/Tussilago/tus1mlady.jpg" alt="Nerozkvětlé poupě" id="img1">
+                    <div class="descr-container"><p class="description">Nerozkvetlé poupě na roustoucím stonku. Stonek na sobě nese listům podobné šupiny. Mladé části rostliny jsou fialové a hustě ochlupené. </p></div>
+                    
+                </div>
+                <div class="slides-div">
+                    <img loading="lazy" class = "zoom img" src="./subpages/Tussilago/tus2poupe.jpg" alt="Řez poupětem podbělu" id="img2">
+                    <div class="descr-container"><p class="description">Již od začátku jsou rozpoznatelné dvojí květy. Čím blíže jsme na stonku k poupěti, tím více je zde trichomů a fialových listenů.</p></div>
+                </div>
+                <div class="slides-div">
+                    <img loading="lazy" class = "zoom img" src="./subpages/Tussilago/tus3rozkvete.jpg" alt="Řez rozkvetlým úborem" id="img3">
+                    <div class="descr-container"><p class="description">Podběl kvete. Jako první začínají obvodové jazykovité květy, takže už jsou vidět jejich blizny. Zákrov je hlubší než u pampelišky.</p></div>
+                </div>
+                <div class="slides-div">
+                    <img loading="lazy" class = "zoom img" src="./subpages/Tussilago/tus4kvete.jpg" alt="Rozkvetlý úbor ze strany" id="img4">
+                    <div class="descr-container"><p class="description">Stejně starý podběl jako předchozí, jen ne na řezu. Stonek začal plně asimilovat a tak ztratil svou fialovou barvu.</p></div>
+                </div>
+                <div class="slides-div">
+                    <img loading="lazy" class = "zoom img" src="./subpages/Tussilago/tus5odkvet.jpg" alt="Odkvétající podběl" id="img5">
+                    <div class="descr-container"><p class="description">Podběl odkvétá. Části nad kalichem (chmýrem) již nejsou potřeba a tak se odlučují a usychají. Oproti pampelišce se ale u podbělu úbory sklánějí k zemi.</p></div>
+                </div>
+                <div class="slides-div">
+                    <img loading="lazy" class = "zoom img" src="./subpages/Tussilago/tus6.jpg" alt="Zrající úbor podbělu" id="img6">
+                    <div class="descr-container"><p class="description">Semeníky se přeměnily na nažky a značně se prodloužili. Čemu také přibyli na délce jsou i ostatní části květů, zvláště pak chmýry.</p></div>
+                </div>
+                <div class="slides-div">
+                    <img loading="lazy" class = "zoom img" src="./subpages/Tussilago/tus7plodi.jpg" alt="Plodící podběl" id="img7">
+                    <div class="descr-container"><p class="description">Podpěl plodí. Nažky se zbarvily do hněda. Květní lůžko se vypouklo a podmiňuje tak kulatost chmýří.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="imgtext">
+            <div class="insection-text"><p class="prgph">Jak je známo dva rody hvězdnicovitých, pcháč a bodlák, lze jednoznačně určit dle vláken jejich chmýří. Jaké pak má tedy chmýří podběl? Vyrůstá v kruhu na vrcholu nažky a sestává se z jednoduchých vláken. Ty nejsou hladká, ale, zdá se každá buňka, vyčnívá na distálním konci v &bdquo;osten&ldquo;. Vlákno je teda &bdquo;osténkaté&ldquo; v celém obvodu. Podobné vlákna má i pampeliška.</p></div>
+            <img loading="lazy" class="zoom sec-img" src="./subpages/Tussilago/chmyr.jpg" alt="Struktura chmýru">
+            <img loading="lazy" class="zoom sec-img" src="./subpages/Tussilago/chmyr2.jpg" alt="Stavba chmýří">
+        </section>
+
+        <section class="imgtext nazka-section">
+            <div class = "insection-text nazka">
+                <p class="prgph">Nažka (achaenium), jednoplodolistový plod, má oplodí <span class="important">blanité nebo kožovité</span>. Nažky podbělu jsou podélné a mírně svrasklé ale hladké.</p>
+            </div>
+            <img loading="lazy" class = "zoom sec-img" src="./subpages/Tussilago/plod2.jpg" alt="Nažka podbělu">
+            <img loading="lazy" class = "zoom sec-img" src="./subpages/Tussilago/plod1.jpg" alt="Chmýr podbělu">
+        </section>
+
+        <section class="imgtext">
+            <div class="trich-text insection-text">
+                <p class="prgph">Jeho české rodové a latinské druhé jméno nesouvisí ani tak s markantními žlutými květy, ale s listy. Ty vyrůstají až po odkvětu a tedy se objevují až během a po kulminaci léta. Ze spodní strany na sobě nesou spostu bílých trichomů, které vytváří souvislou vrstvičku něčeho, co připomíná mouku (latinsky farina = mouka a ferre = nésti).Takové jsou i pokožky stonků a řapíků. </p>
+                <p class="prgph">Naproti listům, nese ale stonek hned tři typy trichomů: žlaznaté s fialovými žlázkami a vláknité krycí. Druhé mají na svědomí moučnatý vzhled.</p>
+            </div>
+            <img loading="lazy" class = "zoom sec-img" src="./subpages/Tussilago/stonek1.jpg" alt="Řez stonkem podbělu">
+            <img loading="lazy" class="zoom sec-img" src= "./subpages/Tussilago/stonek3.jpg" alt="Stonek podbělu s trichomy">
+        </section>
+
+        <section class="imgtext">
+            <div class="insection-text">
+                <p class="prgph">Kalichy - barviva v mládí a ve stáří. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex sequi quasi est cum aperiam itaque a inventore magnam doloremque. Corporis quae voluptate vitae, cupiditate distinctio omnis optio esse alias inventore?</p>
+            </div>
+            <img loading="lazy" class="zoom sec-img" src="./subpages/Tussilago/zakrov1.jpg" alt="Mladý kalich podbělu">
+            <img loading="lazy" class="zoom sec-img" src="./subpages/Tussilago/zakrov2.jpg" alt="Kalich podbělu za květu">
+        </section>
+
+</div>
+</div>
+
+<footer id="footer">
+    <p class="footItem">Tomáš Spurný - Portfolio</p>
+    <a class="footItem" href="mailto:tomass.spurny@seznam.cz">tomass.spurny@seznam.cz</a>
+    <p class="footItem">jaro 2023</p>
+
+    <ul class="">
+        <li><a href="https://www.facebook.com/tomas.spurny.967"><img loading="lazy" src="./icons/fb.png" alt=""></a></li>
+        <li><a href="https://www.instagram.com/vejdrspurny/"><img loading="lazy" src="./icons/ig.png" alt=""></a></li>
+        <li><a href="https://github.com/Berusska"><img loading="lazy" src="./icons/gthb.png" alt=""></a></li>
+        <li><a href="mailto:muj.mail@zaZavinacem.to"><img loading="lazy" src="./icons/mail.png" alt=""></a></li>
+        <li><a href="https://youtu.be/wj5fD-QECy0&t=27"><img loading="lazy" src="./icons/ytb.png" alt=""></a></li>
+        <!-- <li><a href="https://www.youtube.com/shorts/pgtu5es2vOk"><img loading="lazy" src="./icons/ytb.png" alt=""></a></li> -->
+    </ul>
+</footer>
+
+<script src="./DataMenu.js"></script>
+<script src="./medium-zoom.min.js"></script>
+<script src="./main.js"></script>
+
+</body>
+</html>
