@@ -7,6 +7,14 @@ var jsonPlants = [
             "name": "Podběl obecný",
             "url": "./Tussilago.html"
         },
+        {
+            "name": "Přeslička obecná",
+            "url": "./Equisetum.html"
+        },
+        {
+            "name": "Janovec metlatý",
+            "url": "./Cytisus.html"
+        },
     ];
 
 
