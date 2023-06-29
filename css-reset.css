@@ -12,7 +12,20 @@
   */
 * {
     margin: 0;
+  }
+img {  
+  background-size: cover;
 }
+
+p{
+  font-size: larger;
+}
+
+/* img[alt] {
+  text-align: center;
+  padding: 80px 15px;
+} */
+
 
 /*
     3. Allow percentage-based heights in the application

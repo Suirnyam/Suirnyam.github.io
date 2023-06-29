@@ -1,4 +1,8 @@
 /subpages/Taraxacum
 /subpages/Tussilago
 /subpages/Equisetum
-/iconProjects
+/backgrounds/
+/iconProjects/
+*.jpg
+*.jpeg
+*.png

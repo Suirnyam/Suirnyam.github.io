@@ -46,3 +46,9 @@ a.footItem:hover{
 #footer ul li a img:hover{
   width: 35px;
 }
+
+
+img[alt].footimg {
+  text-align: center;
+  padding: 0px;
+}

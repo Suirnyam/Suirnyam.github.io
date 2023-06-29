@@ -50,6 +50,8 @@
   opacity: 1;
   visibility: visible;
   z-index: 10;
+  overflow-y: auto;
+  max-height: 90vh;
 }
 
 .menuTitle {
@@ -69,7 +71,7 @@
   font-weight: 400;
 }
 
-.menu::before {
+/* .menu::before {
   content: '';
   position: absolute;
   top: -8px;
@@ -80,7 +82,7 @@
   border-top: 1px solid black;
   border-left: 1px solid black;
   transform: rotate(45deg);
-}
+} */
 
 .polozkyMenu {
   list-style: none;

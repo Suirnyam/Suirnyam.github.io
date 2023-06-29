@@ -9,7 +9,9 @@ header{
     display: flex;
 }
 
-
+img{
+    background-size: cover
+}
 .title-container{
     position: relative;
     margin: 0 auto;
