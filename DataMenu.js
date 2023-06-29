@@ -8,12 +8,8 @@ var jsonPlants = [
             "url": "./Tussilago.html"
         },
         {
-            "name": "Přeslička obecná",
+            "name": "Přeslička rolní",
             "url": "./Equisetum.html"
-        },
-        {
-            "name": "Janovec metlatý",
-            "url": "./Cytisus.html"
         },
     ];
 
