@@ -80,8 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Horizontální scroll u contejnrů s obrázky
-const container = document.getElementById("scrollmenu");
-    container.addEventListener("wheel", function (e) {
+elements = document.querySelectorAll('.scrollmenu');
+
+elements.forEach((container, key) => {
+  container.addEventListener("wheel", function (e) {
     if (e.deltaY > 0) {
         container.scrollLeft += 100;
         e.preventDefault();
@@ -91,5 +93,4 @@ const container = document.getElementById("scrollmenu");
         e.preventDefault();
     }
     });
-    // https://dev.to/juanbelieni/how-to-create-horizontal-scroll-with-mouse-wheel-using-javascript-4cm5
-    // https://stackoverflow.com/questions/11700927/horizontal-scrolling-with-mouse-wheel-in-a-div
+})

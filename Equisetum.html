@@ -11,6 +11,42 @@
 <link rel="stylesheet" href="./SUBmenu.css">
 <link rel="stylesheet" href="./subpages/tus.css"> <!--Specifické CSS-->
 <link rel="stylesheet" href="./footers.css">
+
+
+<style>
+    #img-zoomer-box {
+        position: relative;
+      }
+      
+      
+      #img-zoomer-box:hover, 
+      #img-zoomer-box:active {
+        display: block;
+      }
+      
+      #img-zoomer-box:hover #img-2, #img-zoomer-box:active #img-2 {
+        opacity: 1;
+      }
+      #img-2 {
+        width: 340px;
+        height: 340px;
+        box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+        background-repeat: no-repeat;
+        background-color: rgba(250, 235, 215, 0);
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+        border: 4px solid antiquewhite;
+        z-index: 99;
+        border-radius: 100%;
+        display: block;
+        transition: opacity .2s;
+        background-size: 150vh auto;
+        transform: scale(1.5);
+      }
+
+</style>
+
 </head>
 
 <body background= "./backgrounds/okno.jpg">
@@ -58,6 +94,10 @@
         </div>
     </header>
 
+<div id="magnifier">
+
+</div>
+
 <div class="container-color">
     <div class="container-content">
 
@@ -74,10 +114,10 @@
 
         <div class="scrollmenu" id="scroll1">
             <div class = "slides-div">
-                <img loading="lazy" class = "zoom img-w" alt=""
+                <img loading="lazy" class = "zoom magn img-w" alt=""
                 style="background:url(./subpages/Equisetum/jaro_.jpg); background-size: cover"
                 src="./subpages/Equisetum/jaro.jpg">
-            </div>
+                </div>
             <div class = "slides-div">
                 <img loading="lazy" class = "zoom img-w" alt=""
                 style="background:url(./subpages/Equisetum/jaro1_.jpg); background-size: cover"
@@ -113,17 +153,24 @@
     </section>
 
     <section class="imgtext flos-section">
-        <img loading="lazy" class="zoom sec-img flos-img" alt=""
-        style="background:url(./subpages/Equisetum/PredVytrusem_.jpg); background-size: cover" 
-        src="./subpages/Equisetum/PredVytrusem.jpg">
+        <div id="img-zoomer-bo">
+            <img loading="lazy" class="zoom sec-img flos-img" alt=""
+            style="background:url(./subpages/Equisetum/PredVytrusem_.jpg); background-size: cover" 
+            src="./subpages/Equisetum/PredVytrusem.jpg">
+                        
+        </div>
+
         <div class = "insection-text flos" style="width: 30%">
             <p class="prgph">Výtrusnicový klas se skládá z přeslenitě uspořádaných <span class="important">štitkovitých</span> sporofylů nesoucích na spodni straně několik <span class="important">vakovitých</span> výtrusnic.</p> 
             <p class="prgph"></p>
         </div>
-        <img loading="lazy" class="zoom sec-img flos-img" alt=""
-        style="background:url(./subpages/Equisetum/RezStrobilem_.jpg); background-size: cover"
-        src="./subpages/Equisetum/RezStrobilem.jpg">
 
+        <div id="img-zoomer-box">
+            <img loading="lazy" class="zoom sec-img flos-img" alt="" id="img-1"
+            style="background:url(./subpages/Equisetum/RezStrobilem_.jpg); background-size: cover"
+            src="./subpages/Equisetum/RezStrobilem.jpg">
+            <div id="img-2"></div>            
+        </div>
         <img loading="lazy" class="zoom sec-img flos-img" alt=""
         style="background:url(./subpages/Equisetum/bottom_.jpg); background-size: cover" 
         src="./subpages/Equisetum/bottom.jpg">
@@ -137,7 +184,7 @@
         <p class="prgph">Letní lodyha je větvená. První článek v přeslenu je delší než příslušná lodyžní pochva na hlavním stonku (na rozdíl od přesličky bahenní, kde je to naopak).</p>
 
         
-        <div class="scrollmenu" id="scroll1">
+        <div class="scrollmenu" id="scroll2">
             <div class = "slides-div">
                 <img loading="lazy" class = "zoom img-w" alt=""
                 style="background:url(./subpages/Equisetum/leto1_.jpg); background-size: cover"
@@ -168,11 +215,7 @@
                 style="background:url(./subpages/Equisetum/leto5_.jpg); background-size: cover"
                 src="./subpages/Equisetum/leto5.jpg">
             </div>
-            <div class = "slides-div">
-                <img loading="lazy" class = "zoom img-w" alt=""
-                style="background:url(./subpages/Equisetum/leto6_.jpg); background-size: cover"
-                src="./subpages/Equisetum/leto6.jpg">
-            </div>
+
         </div>
         <p class="prgph">Drobné šupinovité listy (mikrofyly), vzniklé redukcí z megafylů, vyrůstají z lodyžních uzlin a bývají na bázi <span class="important">pochvovitě srostlé</span>. Z lodyžních uzlin pak vyrůstají <span class="important">postranní větve</span>, které byvají často špatně označovány jako listy.</p>
         </section>
@@ -248,10 +291,55 @@
 
     </ul>
 </footer>
+<script>
+    let original = document.querySelector('#img-1'),
+    magnified = document.querySelector('#img-2');
+    magnified.style.backgroundImage = "url('" + original.src + "')";
 
+
+
+    let zoomer = function (){
+        document.querySelector('#img-zoomer-box')
+          .addEventListener('mousemove', function(e) {
+      
+          let original = document.querySelector('#img-1'),
+              magnified = document.querySelector('#img-2'),
+              style = magnified.style,
+              x = e.pageX - this.offsetLeft,
+              y = e.pageY - this.offsetTop,
+              imgWidth = original.offsetWidth,
+              imgHeight = original.offsetHeight,
+              xperc = ((x/imgWidth) * 100),
+              yperc = ((y/imgHeight) * 100);
+      
+          //lets user scroll past right edge of image
+          if(x > (.01 * imgWidth)) {
+            xperc += (.15 * xperc);
+          };
+      
+          //lets user scroll past bottom edge of image
+          if(y >= (.01 * imgHeight)) {
+            yperc += (.15 * yperc);
+          };
+          style.backgroundPositionX = (xperc-4) + '%';
+          style.backgroundPositionY = (yperc-4) + '%';
+
+
+          style.left = (x - 180) + 'px';
+          style.top = (y - 180) + 'px';
+
+      
+        }, false);
+      }();
+
+
+  </script>
 <script src="./DataMenu.js"></script>
 <script src="./medium-zoom.min.js"></script>
 <script src="./main.js"></script>
+
+
+
 
 </body>
 </html>
