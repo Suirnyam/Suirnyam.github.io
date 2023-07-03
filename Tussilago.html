@@ -12,6 +12,46 @@
 <link rel="stylesheet" href="./SUBmenu.css">
 <link rel="stylesheet" href="./subpages/tus.css"> <!--Specifické CSS-->
 <link rel="stylesheet" href="./footers.css">
+
+<style>
+    .img-zoomer-box {
+        position: relative;
+      }
+      
+      
+      .img-zoomer-box:hover, 
+      .img-zoomer-box:active {
+        display: block;
+      }
+      
+       .img-zoomer-box:hover #img-2, .img-zoomer-box:active #img-2 {
+        opacity: 1;
+      }
+      .img-2 {
+        width: 340px;
+        height: 340px;
+        box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+        background-repeat: no-repeat;
+        background-color: rgba(250, 235, 215, 0);
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+        border: 4px solid antiquewhite;
+        z-index: 99;
+        border-radius: 100%;
+        display: block;
+        transition: opacity .2s;
+        background-size: 150vh auto;
+        transform: scale(1.5);
+      }
+
+      .img-zoomer-box:hover div.img-2 {
+        display: block;
+        opacity: 1;
+      }
+
+</style>
+
 </head>
 
 <body background= "./backgrounds/okno.jpg">
@@ -111,16 +151,22 @@
         <p class="prgph">Jen jako poznámka: Trubkovité květy jsou pětičetné a jako mladé jsou v terči na sebe relativně těsně nahloučené. Nicméně z pravidelného pětiúhelníku nelze plně pokrýt plochu. Bez mezer totiž vzniká dodekahedron, jedno z platónských těles. Na plné pokrytí je třeba (mj. např.) šestiúhelník. Jestli tím příroda něco sleduje v rámci šetření místa pro květy a za maximalizování plochy rozkvetlých květů?</p>
 
         <section class="imgtext flos-section">
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Jazykovité květy podbělu" class="zoom sec-img flos-img"
             style="background:url(./subpages/Equisetum/jazyk_.jpg); background-size: cover" 
             src="./subpages/Tussilago/jazyk.jpg">
+            </div>
+
             <div class = "insection-text flos">
                 <p class="prgph">Úbor obsahuje dva typy květů. Jejich barva se ale neřídí typickým zbarvením, tj. žluté uprostřed a bílé nebo jinak barevné na okraji. </p> 
                 <p class="prgph">Je vidět <span class="important">spodní</span> semeník, kalich <span class="important">přeměnný</span> na chmýr, a pak koruna (jazykovitá zygomorfní nebo trubkovitá srostlá z pěti lístků) a blizny. U trubkovitých květů je jestě pět tyčinek, které srůstají na úrovni pouzder. Na rozdíl od pampelišky zde <span class="important">chybí stopka</span> mezi chmýrem a semeníkem.</p>
             </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Trubkovité květy podbělu" class="zoom sec-img flos-img"
             style="background:url(./subpages/Equisetum/trubka_.jpg); background-size: cover"
             src="./subpages/Tussilago/trubka.jpg">
+            </div>
         <!-- https://uselessetymology.com/2018/02/03/the-etymology-of-dandelion/ -->
         </section>
 
@@ -176,24 +222,35 @@
 
         <section class="imgtext">
             <div class="insection-text"><p class="prgph">Jak je známo dva rody hvězdnicovitých, pcháč a bodlák, lze jednoznačně určit dle vláken jejich chmýří. Jaké pak má tedy chmýří podběl? Vyrůstá v kruhu na vrcholu nažky a sestává se z jednoduchých vláken. Ty nejsou hladká, ale, zdá se každá buňka, vyčnívá na distálním konci v &bdquo;osten&ldquo;. Vlákno je teda &bdquo;osténkaté&ldquo; v celém obvodu. Podobné vlákna má i pampeliška.</p></div>
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-img" alt="Struktura chmýru"
             style="background:url(./subpages/Equisetum/chmyr_.jpg); background-size: cover"
             src="./subpages/Tussilago/chmyr.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-img" alt="Stavba chmýří"
             style="background:url(./subpages/Equisetum/chmyr2_.jpg); background-size: cover"
             src="./subpages/Tussilago/chmyr2.jpg">
+            </div>
         </section>
 
         <section class="imgtext nazka-section">
             <div class = "insection-text nazka">
                 <p class="prgph">Nažka (achaenium), jednoplodolistový plod, má oplodí <span class="important">blanité nebo kožovité</span>. Nažky podbělu jsou podélné a mírně svrasklé ale hladké.</p>
             </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class = "zoom sec-img" alt="Nažka podbělu"
             style="background:url(./subpages/Equisetum/plod2_.jpg); background-size: cover"
             src="./subpages/Tussilago/plod2.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class = "zoom sec-img" alt="Chmýr podbělu"
             style="background:url(./subpages/Equisetum/plod1_.jpg); background-size: cover"
             src="./subpages/Tussilago/plod1.jpg">
+            </div>
         </section>
 
         <section class="imgtext">
@@ -201,24 +258,35 @@
                 <p class="prgph">Jeho české rodové a latinské druhé jméno nesouvisí ani tak s markantními žlutými květy, ale s listy. Ty vyrůstají až po odkvětu a tedy se objevují až během a po kulminaci léta. Ze spodní strany na sobě nesou spostu bílých trichomů, které vytváří souvislou vrstvičku něčeho, co připomíná mouku (latinsky farina = mouka a ferre = nésti).Takové jsou i pokožky stonků a řapíků. </p>
                 <p class="prgph">Naproti listům, nese ale stonek hned tři typy trichomů: žlaznaté s fialovými žlázkami a vláknité krycí. Druhé mají na svědomí moučnatý vzhled.</p>
             </div>
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class = "zoom sec-img" alt="Řez stonkem podbělu"
             style="background:url(./subpages/Equisetum/stonek1_.jpg); background-size: cover" 
             src="./subpages/Tussilago/stonek1.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-img" alt="Stonek podbělu s trichomy"
             style="background:url(./subpages/Equisetum/stonek3_.jpg); background-size: cover"
             src= "./subpages/Tussilago/stonek3.jpg">
+            </div>
         </section>
 
         <section class="imgtext">
             <div class="insection-text">
                 <p class="prgph">Kalichy - barviva v mládí a ve stáří. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex sequi quasi est cum aperiam itaque a inventore magnam doloremque. Corporis quae voluptate vitae, cupiditate distinctio omnis optio esse alias inventore?</p>
             </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-img" alt="Mladý kalich podbělu"
             style="background:url(./subpages/Equisetum/zakrov1_.jpg); background-size: cover"
             src="./subpages/Tussilago/zakrov1.jpg" >
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-img" alt="Kalich podbělu za květu"
             style="background:url(./subpages/Equisetum/zakrov2_.jpg); background-size: cover"
             src="./subpages/Tussilago/zakrov2.jpg">
+            </div>
         </section>
 
 </div>

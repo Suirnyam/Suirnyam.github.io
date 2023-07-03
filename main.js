@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Horizontální scroll u contejnrů s obrázky
+// #######################################################################
 elements = document.querySelectorAll('.scrollmenu');
 
 elements.forEach((container) => {
@@ -97,12 +98,10 @@ elements.forEach((container) => {
 
 
 // Lupa na vsechny obrazky s klassou zoom v divu img-zoomer-box s mouseover efektem 
-
-
-
-
+// #######################################################################
 var glassDiv = document.createElement('div');
 glassDiv.setAttribute("class", "img-2")
+
 
 function magnify(elmnt){
   elmnt.appendChild(glassDiv)
@@ -139,6 +138,8 @@ function magnify(elmnt){
     style.left = (x - 180) + 'px';
     style.top = (y - 180) + 'px';
 
+    // style.left = (50) + '%';
+    // style.top = (50) + '%';
 
 
   }, false);
@@ -149,6 +150,10 @@ function magnify(elmnt){
 };
 
 };
+
+
+
+
 
 function delDiv(){
   document.querySelectorAll(".img-2").style.opacity = 0.5;

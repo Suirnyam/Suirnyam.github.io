@@ -13,6 +13,48 @@
 <link rel="stylesheet" href="./subpages/tar.css"> <!--Specifické CSS-->
 <link rel="stylesheet" href="./footers.css">
 
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .img-zoomer-box {
+        position: relative;
+      }
+      
+      
+      .img-zoomer-box:hover, 
+      .img-zoomer-box:active {
+        display: block;
+      }
+      
+       .img-zoomer-box:hover #img-2, .img-zoomer-box:active #img-2 {
+        opacity: 1;
+      }
+      .img-2 {
+        width: 340px;
+        height: 340px;
+        box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+        background-repeat: no-repeat;
+        background-color: rgba(250, 235, 215, 0);
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+        border: 4px solid antiquewhite;
+        z-index: 99;
+        border-radius: 100%;
+        display: block;
+        transition: opacity .2s;
+        background-size: 150vh auto;
+        transform: scale(1.5);
+      }
+
+      .img-zoomer-box:hover div.img-2 {
+        display: block;
+        opacity: 1;
+      }
+
+</style>
 
 </head>
 
@@ -106,16 +148,24 @@
                 <p class="prgph">I když by se názvy pampe-liška a dande-lion mohly řídit stejnou logikou, etymologické prameny to nepotvrzují. Vedou totiž na slouvo <span class="important">pléška</span> označující mnišskou pleš. Další jazykovou hrou je i skutečnost, že chmýru se odborně říká pappus. Tak se ve staré latině označoval starý muž a vzpomeňme jaké ti mají bílé vlasy ...</p>
                 <p class="prgph">Zubaté nejsou jen zelené asimilační listy. Tři zuby mají na svém konci i jazykovité korunní lístky </p>
             </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Prýt pampelišky" class="zoom sec-img"
             style="background:url(./subpages/Taraxacum/walter-sturn-unsplash_.jpg); background-size: cover"
             src="./subpages/Taraxacum/walter-sturn-unsplash.jpg">
+            </div>
+            
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Zuby lva" class="zoom sec-img"
             style="background:url(./subpages/Taraxacum/thapelo-letsholo-unsplash_.jpg); background-size: cover"
             src="./subpages/Taraxacum/thapelo-letsholo-unsplash.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class = "zoom sec-img" alt="Zubatý jazykovitý korunní lístek pampelišky"
             style="background:url(./subpages/Taraxacum/zuby_.jpg); background-size: cover"
             src="./subpages/Taraxacum/zuby.jpg">
-        <!-- https://uselessetymology.com/2018/02/03/the-etymology-of-dandelion/ -->
+            </div>        <!-- https://uselessetymology.com/2018/02/03/the-etymology-of-dandelion/ -->
         </section>
 
 
@@ -182,30 +232,48 @@
 
         <section class="imgtext korun">
             <div class="insection-text"><p class="prgph">Úbor obecně může obsahovat dva typy květů - <span class="important">jazykovité</span> a trubkovité. U pampelišky se vytvářejí jen ty první. Jsou zygomorfní. Mají <span class="important">spodní</span> semeník srostlý ze dvou plodolistů. Z něj vyrůsta stopka s kalichem, který je přeměněn v chmýr. Náleduje trubkovitá část koruního lístku. Uvnitř ní jsou nitky <span class="important">pěti</span> tyčinek, jejichž pouzdra srůstají o něco výše také v trubku, skrz ní prorůstá čnělka s bliznami. Na nich jsou pak přilepeny pylová zrna.</p></div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-img" alt="Jazykovitý květ pampelišky"
             style="background:url(./subpages/Taraxacum/korun_.jpg); background-size: cover"
             src="./subpages/Taraxacum/korun.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-img" alt="Kvetoucí jazykovitý květ pampelišky"
             style="background:url(./subpages/Taraxacum/korun2_.jpg); background-size: cover"
             src="./subpages/Taraxacum/korun2.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Blizna květu" class="zoom sec-img"
             style="background:url(./subpages/Taraxacum/blizna_.jpg); background-size: cover"
             src="./subpages/Taraxacum/blizna.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Srostlé pračníky" class="zoom sec-img"
             style="background:url(./subpages/Taraxacum/tycinky_.jpg); background-size: cover"
             src="./subpages/Taraxacum/tycinky.jpg">
+            </div>
         </section>
 
         <section class="imgtext nazka-section">
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Nažky s výběžky" class="zoom nazka-img"
             style="background:url(./subpages/Taraxacum/nazka2_.jpg); background-size: cover"
             src="./subpages/Taraxacum/nazka2.jpg">
+            </div>
+
             <div class = "insection-text nazka">
                 <p class="prgph">Nažka (achaenium), jednoplodolistový plod, má oplodí <span class="important">blanité nebo kožovité</span> a pevněji objímá semeno než u oříšku. Předtavme si např. černá neloupaná slunečnicová &bdquo;semínka&ldquo;. Nažky mají často různé výběžky, háčky a chmýr.</p>
                 <p class="prgph">Stavba chmýru je pro pampelišku také charakteristická např od chmýru kozí brady luční se dosti značně liší. Existují o něm i vědecké články - studuje se jeho aerodynamika nebo schopnost držet kapičky vody.</p></div>
-            <img loading="lazy" class = "zoom nazka-img" alt="Nažka close up"
-            style="background:url(./subpages/Taraxacum/nazka_.jpg); background-size: cover"
-            src="./subpages/Taraxacum/nazka.jpg">
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
+                <img loading="lazy" class = "zoom nazka-img" alt="Nažka close up"
+                style="background:url(./subpages/Taraxacum/nazka_.jpg); background-size: cover"
+                src="./subpages/Taraxacum/nazka.jpg">
+            </div>
         </section>
 
         <section class="imgtext">
@@ -216,36 +284,54 @@
                 
                 <p class="prgph">Staročeské pojmenování <span class="important">smetanka</span> je pak odvozeno od smetany. Podobně označení <span class="important">mlíčí</span> používané pro zelenou část rostliny je odvozeno od mléka. </p>
             </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class = "zoom sec-img" alt="Mléčící pampeliška"
             style="background:url(./subpages/Taraxacum/latex_.jpg); background-size: cover"
             src="./subpages/Taraxacum/latex.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Schéma řezu kořene pampelišky" class="zoom sec-img"
             style="background:url(./subpages/Taraxacum/rezKoren_.jpg); background-size: cover"
             src="./subpages/Taraxacum/rezKoren.jpg">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-img" alt="Řez stonkem pampelišky"
             style="background:url(./subpages/Taraxacum/rez_.jpg); background-size: cover"
             src="./subpages/Taraxacum/rez.jpg">
+            </div>
         </section>
 
         <section class="imgtext">
             <div class="insection-text">
                 <p class="prgph">Na stonku a jsou přítomny <span class="important">trichomy</span>. Jsou mnohobuněčné a vytváří dlouhý seschlý řetízek na kterém se světlo láme do takové míry, že se trichomy z dálky jeví <span class="important">bíle</span>.</p>
             </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-imgB" alt="Trichomy pampelišky"
             style="background:url(./subpages/Taraxacum/trix_.jpg); background-size: cover"
             src="./subpages/Taraxacum/trix.png">
+            </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" class="zoom sec-imgB" alt="Vláknité chlupy pampelišky"
             style="background:url(./subpages/Taraxacum/trich_.jpg); background-size: cover"
             src="./subpages/Taraxacum/trich.jpg">
+            </div>
         </section>
 
         <section class="imgtext">
             <div class="insection-text">
                 <p>U slunečnice je asi markantnější, nicméně i u pozice květů na lůžku pampelišky lze najít <span class="important">zlatou spirálu</span>. Pro podtržení tohoto, byl následující květ seříznut na úrovni nažek. Je též vidět, že nažky jsou na příčném řezu kosodelníkové.</p>
             </div>
+
+            <div class="img-zoomer-box"  onmousemove="magnify(this);">
             <img loading="lazy" alt="Zlatý řez na lůžku pampelišky" class="zoom sec-img"
             style="background:url(./subpages/Taraxacum/zlaty_.jpg); background-size: cover"
             src="./subpages/Taraxacum/zlaty.jpg">
+            </div>
         </section>
 </div>
 </div>
