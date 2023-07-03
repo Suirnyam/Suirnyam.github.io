@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Horizontální scroll u contejnrů s obrázky
 elements = document.querySelectorAll('.scrollmenu');
 
-elements.forEach((container, key) => {
+elements.forEach((container) => {
   container.addEventListener("wheel", function (e) {
     if (e.deltaY > 0) {
         container.scrollLeft += 100;
@@ -94,3 +94,71 @@ elements.forEach((container, key) => {
     }
     });
 })
+
+
+// Lupa na vsechny obrazky s klassou zoom v divu img-zoomer-box s mouseover efektem 
+
+
+
+
+var glassDiv = document.createElement('div');
+glassDiv.setAttribute("class", "img-2")
+
+function magnify(elmnt){
+  elmnt.appendChild(glassDiv)
+
+  let original = elmnt.querySelector(".zoom"),
+  magnified = elmnt.querySelector('.img-2');
+
+  magnified.style.backgroundImage = "url('" + original.src + "')";
+  magnified.style.opacity = 1;
+
+
+  elmnt.addEventListener('mousemove', function(e) {
+      
+    let style = magnified.style,
+        x = e.pageX - this.offsetLeft,
+        y = e.pageY - this.offsetTop,
+        imgWidth = original.offsetWidth,
+        imgHeight = original.offsetHeight,
+        xperc = ((x/imgWidth) * 100),
+        yperc = ((y/imgHeight) * 100);
+
+    //lets user scroll past right edge of image
+    if(x > (.01 * imgWidth)) {
+      xperc += (.15 * xperc);
+    };
+
+    //lets user scroll past bottom edge of image
+    if(y >= (.01 * imgHeight)) {
+      yperc += (.15 * yperc);
+    };
+    style.backgroundPositionX = (xperc-4) + '%';
+    style.backgroundPositionY = (yperc-4) + '%';
+
+
+    style.left = (x - 180) + 'px';
+    style.top = (y - 180) + 'px';
+
+
+  }, false);
+
+
+
+};
+
+function delDiv(){
+  document.querySelectorAll(".img-2").style.opacity = 0.5;
+};
+
+
+
+
+
+
+
+
+
+// Testovací
+      // v HTML: onmouseover="changeDef(this)"
+      // function changeDef(event) {alert(event.id);}
