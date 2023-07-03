@@ -111,9 +111,8 @@ function magnify(elmnt){
   magnified = elmnt.querySelector('.img-2');
 
   magnified.style.backgroundImage = "url('" + original.src + "')";
-  magnified.style.opacity = 1;
-
-
+  
+  
   elmnt.addEventListener('mousemove', function(e) {
       
     let style = magnified.style,
@@ -141,9 +140,13 @@ function magnify(elmnt){
     style.top = (y - 180) + 'px';
 
 
+
   }, false);
 
-
+  if (!elmnt.parentNode.matches(":hover")) {
+    magnified.style.opacity = 0;
+    return 0;
+};
 
 };
 
