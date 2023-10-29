@@ -31,12 +31,12 @@ img{
 
 
 .container-color{
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     border-radius: 50px;
     border: 1px solid black;
     margin: 100px auto;
     width: 1000px;
-    background-image: url("./../backgrounds/a.jpg");
+    /*background-image: url("./../backgrounds/a.jpg");*/
     /* max-width: 90%; */
 }
 
