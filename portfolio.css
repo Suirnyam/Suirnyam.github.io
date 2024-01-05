@@ -55,7 +55,8 @@ nav {
     position: sticky;
     top: 0;
     background-color: #64615F;
-    background-image: url("./backgrounds/alan-scales-1_WMZARl81c-unsplash.jpg");
+    background-image: url("./backgrounds/export-2024-01-05 161153.svg");
+    background-size: cover;	
     background-position: center;
 
     z-index: 10;
