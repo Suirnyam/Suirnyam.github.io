@@ -1,6 +1,6 @@
 #footer {
   /* background-color: #023047; */
-  background-image: url("./backgrounds/footbg.jpg");
+  background-image: url("./backgrounds/alan-scales-1_WMZARl81c-unsplash.jpg");
   padding-top: 30px;
   border: 1px solid black;
   color: #E0E0E0;
@@ -38,13 +38,13 @@ a.footItem:hover{
 }
 
 #footer ul li a img{
-  width: 25px;
+  width: 35px;
   height: auto;
   border-radius: 0;
 }
 
 #footer ul li a img:hover{
-  width: 35px;
+  width: 50px;
 }
 
 

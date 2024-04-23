@@ -1,1 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" version="1.1" viewBox="0 0 900 301"><rect x="0" y="0" width="900" height="300" fill="#FFFFFF"/><path d="M0 185L129 208L257 200L386 220L514 187L643 183L771 203L900 208L900 301L771 301L643 301L514 301L386 301L257 301L129 301L0 301Z" fill="#c62368"/><path d="M0 239L129 211L257 229L386 227L514 207L643 237L771 222L900 215L900 301L771 301L643 301L514 301L386 301L257 301L129 301L0 301Z" fill="#8b2970"/><path d="M0 227L129 236L257 246L386 221L514 244L643 251L771 234L900 225L900 301L771 301L643 301L514 301L386 301L257 301L129 301L0 301Z" fill="#4f2b64"/><path d="M0 271L129 253L257 242L386 268L514 269L643 263L771 247L900 265L900 301L771 301L643 301L514 301L386 301L257 301L129 301L0 301Z" fill="#1c2247"/><path d="M0 270L129 266L257 282L386 263L514 267L643 284L771 275L900 264L900 301L771 301L643 301L514 301L386 301L257 301L129 301L0 301Z" fill="#001122"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="visual"
+   version="1.1"
+   viewBox="0 0 900 301"
+   sodipodi:docname="layered-peaks-haikei-cropped.svg"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.78111111"
+     inkscape:cx="450"
+     inkscape:cy="150.42674"
+     inkscape:window-width="1280"
+     inkscape:window-height="961"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="visual" />
+  <path
+     d="m 1.0682788,46.667092 128.9999912,50.44895 128.00001,-17.547464 129,43.868652 128,-72.383274 129,-8.773729 127.99999,43.86865 129,10.967165 V 301.10527 h -129 -127.99999 -129 -128 -129 H 130.06827 1.0682788 Z"
+     fill="#c62368"
+     id="path1"
+     style="stroke-width:1.48102" />
+  <path
+     d="m 1.0682788,165.11244 128.9999912,-61.4161 128.00001,39.48177 129,-4.38685 128,-43.86865 129,65.80296 127.99999,-32.90148 129,-15.35402 v 188.6352 h -129 -127.99999 -129 -128 -129 H 130.06827 1.0682788 Z"
+     fill="#8b2970"
+     id="path2"
+     style="stroke-width:1.48102" />
+  <path
+     d="m 1.0682788,138.79126 128.9999912,19.7409 128.00001,21.93433 129,-54.83583 128,50.44895 129,15.35403 127.99999,-37.28836 129,-19.74089 v 166.70088 h -129 -127.99999 -129 -128 -129 H 130.06827 1.0682788 Z"
+     fill="#4f2b64"
+     id="path3"
+     style="stroke-width:1.48102" />
+  <path
+     d="m 1.0682788,235.30229 128.9999912,-39.48178 128.00001,-24.12775 129,57.02923 128,2.19344 129,-13.16061 127.99999,-35.09491 129,39.48179 v 78.96357 h -129 -127.99999 -129 -128 -129 H 130.06827 1.0682788 Z"
+     fill="#1c2247"
+     id="path4"
+     style="stroke-width:1.48102" />
+  <path
+     d="m 1.0682788,233.10887 128.9999912,-8.77373 128.00001,35.09491 129,-41.67523 128,8.77373 129,37.28837 127.99999,-19.7409 129,-24.12775 v 81.157 h -129 -127.99999 -129 -128 -129 H 130.06827 1.0682788 Z"
+     fill="#001122"
+     id="path5"
+     style="stroke-width:1.48102" />
+</svg>
